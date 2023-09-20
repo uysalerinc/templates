@@ -9,14 +9,17 @@ set(RES_DIR ${CMAKE_SOURCE_DIR}/res)
 # Add libraries
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-# Find Requetments
+# Find Requirements
 set(OpenGL_GL_PREFERENCE GLVND)
 find_package(OpenGL REQUIRED)
 add_definitions(${OPENGL_DEFINITIONS})
+
 find_package(GLM REQUIRED)
 message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
+
 find_package(GLFW3 REQUIRED)
 message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
+
 find_package(ASSIMP REQUIRED)
 message(STATUS "Found ASSIMP in ${ASSIMP_INCLUDE_DIR}")
 
@@ -33,8 +36,8 @@ configure_file(cmake/config/dir_helper.h.in cmake/config/dir_helper.h)
 include_directories(${CMAKE_BINARY_DIR}/cmake/config)
 
 # Static Libs
-# add_library(STB_IMAGE "thirdparty/stb_image.cpp")
-# set(LIBS ${LIBS} STB_IMAGE)
+add_library(STB_IMAGE "thirdparty/stb_image.cpp")
+set(LIBS ${LIBS} STB_IMAGE)
 
 add_library(GLAD "thirdparty/glad.c")
 set(LIBS ${LIBS} GLAD)
