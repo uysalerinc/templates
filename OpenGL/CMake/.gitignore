@@ -1,2 +1,2 @@
-.chache/
-build/*
+.cache/
+#build/*
