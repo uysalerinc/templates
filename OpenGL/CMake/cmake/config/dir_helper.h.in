@@ -1,3 +1,9 @@
 #pragma once
-#define ROOT_DIR "@CMAKE_SOURCE_DIR@"
-#define RES_DIR "@RES_DIR@"
+
+// (Almost) Standart Definations
+#define ROOT_DIR "@CMAKE_SOURCE_DIR@/"
+#define RES_DIR "@RES_DIR@/"
+
+// Lazy Definations
+#define SHADER_DIR "@RES_DIR@/shaders/"
+#define TEXTURE_DIR "@RES_DIR@/textures/"
