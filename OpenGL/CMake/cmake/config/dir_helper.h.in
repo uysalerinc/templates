@@ -1,0 +1,2 @@
+#define ROOT_DIR "@CMAKE_SOURCE_DIR@"
+#define RES_DIR "@RES_DIR@"
