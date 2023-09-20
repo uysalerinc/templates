@@ -21,7 +21,6 @@ message(STATUS "Found ASSIMP in ${ASSIMP_INCLUDE_DIR}")
 
 # TODO
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall")
-find_package(OpenGL REQUIRED)
 add_definitions(${OPENGL_DEFINITIONS})
 find_package(X11 REQUIRED)
 
