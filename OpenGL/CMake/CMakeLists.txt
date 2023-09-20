@@ -12,6 +12,7 @@ link_directories(${CMAKE_SOURCE_DIR}/lib)
 # Find Requetments
 set(OpenGL_GL_PREFERENCE GLVND)
 find_package(OpenGL REQUIRED)
+add_definitions(${OPENGL_DEFINITIONS})
 find_package(GLM REQUIRED)
 message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
 find_package(GLFW3 REQUIRED)
@@ -21,7 +22,6 @@ message(STATUS "Found ASSIMP in ${ASSIMP_INCLUDE_DIR}")
 
 # TODO
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall")
-add_definitions(${OPENGL_DEFINITIONS})
 find_package(X11 REQUIRED)
 
 
